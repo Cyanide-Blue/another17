@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Hành Định Kiểu Bảng Trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* 1. Bảng cơ bản có border-collapse và full width */
+        table.custom-table {
+            width: 100%;                  /* Chiều rộng bảng chiếm 100% phần tử chứa */
+            border-collapse: collapse;    /* Gộp các đường viền liền kề thành một */
+            margin-top: 15px;
+        }
+
+        /* Đường viền và khoảng cách padding cho th và td */
+        table.custom-table th, 
+        table.custom-table td {
+            border: 1px solid #000000;    /* Đường viền 1px solid màu đen */
+            padding: 15px;                /* Tạo khoảng cách 15px giữa nội dung và đường viền */
+        }
+
+        /* Cấu hình riêng cho ô tiêu đề <th> */
+        table.custom-table th {
+            height: 50px;                 /* Đặt chiều cao tiêu đề là 50px */
+            text-align: left;             /* Căn chỉnh văn bản theo chiều ngang về bên trái */
+            background-color: #333333;    /* Màu nền tối cho hàng tiêu đề */
+            color: #ffffff;               /* Màu chữ trắng cho tiêu đề */
+        }
+
+        /* Cấu hình riêng cho ô dữ liệu <td> */
+        table.custom-table td {
+            height: 80px;                 /* Đặt chiều cao cho ô dữ liệu là 80px */
+            vertical-align: bottom;       /* Căn chỉnh văn bản xuống dưới theo chiều dọc */
+            background-color: #f2f2f2;    /* Màu nền xám nhạt cho dữ liệu */
+            color: #333333;               /* Màu chữ xám đậm */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Thực Hành Định Kiểu Bảng Trong CSS (Table Styling)</h1>
+
+        <h2>Danh Sách Lớp Học</h2>
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Họ tên</th>
+                    <th>Tuổi</th>
+                    <th>Lớp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>20</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Trần Thị B</td>
+                    <td>21</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Lê Văn C</td>
+                    <td>22</td>
+                    <td>Mobile</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
